@@ -1,0 +1,8 @@
+openai>=1.50.0
+openai-agents>=0.20.0
+python-dotenv
+pydantic
+requests
+flask
+duckduckgo-search
+ddgs>=9.0
