@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,25 +14,41 @@
       <span class="bar purple"></span>
     </div>
     <h1>DEEP / RESEARCH</h1>
-    <p class="subtitle">تحقیق عمیق چندمرحله‌ای اینترنتی</p>
+    <p class="subtitle">Multi-step web investigation</p>
   </header>
 
   <main class="container">
-    <section id="step-research" class="step active">
-      <h2>سوال خود را وارد کنید</h2>
-      <textarea id="query" placeholder="مثلاً: محبوب‌ترین فریم‌ورک‌های ایجنتیک در سال ۲۰۲۶ کدامند؟" rows="3"></textarea>
-      <button id="btn-research" class="btn primary">شروع تحقیق</button>
+
+    <!-- Step 1: ask the question -->
+    <section id="step-question" class="step active">
+      <h2>1. Enter your research question</h2>
+      <textarea id="query" placeholder="e.g. What are the most popular AI agent frameworks in 2026?" rows="3"></textarea>
+      <button id="btn-clarify" class="btn primary">Next</button>
     </section>
 
-    <section id="step-output" class="step">
-      <h2>در حال تحقیق…</h2>
+    <!-- Step 2: clarifying questions -->
+    <section id="step-clarify" class="step">
+      <h2>2. Answer the clarifying questions</h2>
+      <div id="clarify-questions" class="questions"></div>
+      <textarea id="clarifications" placeholder="Type your answers here (optional)" rows="4"></textarea>
+      <div class="actions">
+        <button id="btn-back" class="btn ghost">Back</button>
+        <button id="btn-research" class="btn primary">Start research</button>
+      </div>
+    </section>
+
+    <!-- Step 3: live status + final report -->
+    <section id="step-research" class="step">
+      <h2>3. Researching…</h2>
       <div id="status" class="status"></div>
+      <div id="evaluation" class="evaluation hidden"></div>
       <article id="report" class="report"></article>
     </section>
+
   </main>
 
   <footer>
-    <small>ساخته‌شده با OpenRouter + OpenAI Agents SDK + DuckDuckGo</small>
+    <small>Built with OpenRouter + OpenAI Agents SDK + DuckDuckGo</small>
   </footer>
 
   <script src="{{ url_for('static', filename='app.js') }}"></script>
