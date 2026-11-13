@@ -1,10 +1,11 @@
-"""
-Custom web search tool using DuckDuckGo (no API key needed).
-Replaces OpenAI's hosted WebSearchTool so the project works with any
-LLM provider via OpenRouter.
-"""
+import warnings
+warnings.filterwarnings("ignore", message=".*renamed.*")
 
-from duckduckgo_search import DDGS
+try:
+    from ddgs import DDGS
+except ImportError:
+    from duckduckgo_search import DDGS
+
 from agents import function_tool
 
 
