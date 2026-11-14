@@ -8,6 +8,8 @@ load_dotenv(override=True)
 
 USE_EMAIL = os.getenv("USE_EMAIL", "false").lower() == "true"
 
+settings = ModelSettings(tool_choice="required")
+
 
 @function_tool
 def send_email_tool(subject: str, text_body: str, html_body: str) -> str:
@@ -36,4 +38,5 @@ email_agent = Agent(
     instructions=INSTRUCTIONS,
     tools=[send_email_tool],
     model=model,
+    model_settings=settings,
 )
