@@ -6,3 +6,5 @@ requests
 flask
 duckduckgo-search
 ddgs>=9.0
+
+# tweak: pin ddgs >= 9.0
