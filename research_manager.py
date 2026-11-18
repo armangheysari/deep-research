@@ -144,3 +144,5 @@ class ResearchManager:
 
     async def send_email(self, report: ReportData) -> None:
         await self._run_with_retry(email_agent, report.markdown_report)
+
+# tweak: retry on connection reset too
