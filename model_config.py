@@ -38,3 +38,5 @@ model = OpenAIChatCompletionsModel(
     model=MODEL_NAME,
     openai_client=_openrouter_client,
 )
+
+# tweak: pass http2=False to async client
