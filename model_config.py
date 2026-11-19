@@ -39,4 +39,4 @@ model = OpenAIChatCompletionsModel(
     openai_client=_openrouter_client,
 )
 
-# tweak: bump timeout to 120s
+# tweak: silence h2 logger at error level
