@@ -39,4 +39,4 @@ model = OpenAIChatCompletionsModel(
     openai_client=_openrouter_client,
 )
 
-# tweak: pass http2=False to async client
+# tweak: bump timeout to 120s
