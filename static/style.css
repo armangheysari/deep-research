@@ -133,5 +133,3 @@ footer { text-align: center; padding: 16px; color: var(--muted); border-top: 2px
   .hero h1 { font-size: 1.6rem; }
   .score-grid { grid-template-columns: 1fr; }
 }
-
-# tweak: amber hover shadow on buttons

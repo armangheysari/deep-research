@@ -38,5 +38,3 @@ model = OpenAIChatCompletionsModel(
     model=MODEL_NAME,
     openai_client=_openrouter_client,
 )
-
-# tweak: silence h2 logger at error level
